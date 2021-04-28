@@ -102,4 +102,20 @@ API version should be v1, v2. Version must be specified at the left of the URL p
 ```
 
 ## Allow Offset and Pagination parameters
-Always accept ````limit```, ```offset``` or ```page``` parameters to narrow down your API responses
+Always accept ```limit```, ```offset``` or ```page``` parameters to narrow down your API responses
+
+
+## Use proper HTTP methods for CRUD operations
+**GET**: To retreive a resource or collection.
+**POST**: To create new resources.
+**PUT**: To update or override existing resources.
+**PATCH**: To update existing resources. Only update fields that were supplied.
+**DELETE**: To delete existing resources.
+
+## Enable CORS
+Because you are implementing an API to be accesible from different platforms. Consider supporting a CORS allowed origin of * (all).
+
+## Secure your api with HTTPS
+Whenever be possible, use HTTPS instead of plain HTTP responses, specially if you are managing some protected data.
+
+## Make use of ERROR responses
